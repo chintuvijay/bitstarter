@@ -24,7 +24,7 @@ if (!global.hasOwnProperty('db')) {
             host:     host,
             logging:  true //false
         };
-       // sq = new Sequelize(dbname, user, password, config);
+        sq = new Sequelize(dbname, user, password, config);
     } else {
         /* Local database
            We parse the .pgpass file for the connection string parameters.
