@@ -43,10 +43,10 @@ if (!global.hasOwnProperty('db')) {
         };
         //var sq = new Sequelize(dbname, user, password, config);
     }
-    global.db = {
+    /*global.db = {
         Sequelize: Sequelize,
         sequelize: sq,
         Order: sq.import(__dirname + '/order')
-    };
+    };*/
 }
 module.exports = global.db;
