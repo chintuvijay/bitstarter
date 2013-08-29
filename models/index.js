@@ -41,12 +41,12 @@ if (!global.hasOwnProperty('db')) {
             port:     port,
             host:     host,
         };
-        //var sq = new Sequelize(dbname, user, password, config);
+        var sq = new Sequelize(dbname, user, password, config);
     }
-    /*global.db = {
+    global.db = {
         Sequelize: Sequelize,
         sequelize: sq,
         Order: sq.import(__dirname + '/order')
-    };*/
+    };
 }
 module.exports = global.db;

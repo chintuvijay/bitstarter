@@ -70,15 +70,15 @@ app.get('/refresh_orders', function(request, response) {
 });
 
 // sync the database and start the server
-/*db.sequelize.sync().complete(function(err) {
+db.sequelize.sync().complete(function(err) {
   if (err) {
-    throw(err);
+    throw err;
   } else {
     http.createServer(app).listen(app.get('port'), function() {
       console.log("Listening on " + app.get('port'));
     });
   }
-});*/
+});
 
 // add order to the database if it doesn't already exist
 var addOrder = function(order_obj, callback) {
