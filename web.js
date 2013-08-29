@@ -72,7 +72,7 @@ app.get('/refresh_orders', function(request, response) {
 // sync the database and start the server
 db.sequelize.sync().complete(function(err) {
   if (err) {
-    throw err;
+    return;
   } else {
     http.createServer(app).listen(app.get('port'), function() {
       console.log("Listening on " + app.get('port'));
